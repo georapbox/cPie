@@ -3,20 +3,111 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kineticjs Pie Chart</title>
-	<style>
-		*{ margin:0; padding:0; }
-		/* canvas{
-			border: 1px solid #ccc !important;
-		} */
-	</style>
+	<link rel="stylesheet" href="demo.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="container"></div>
+	<header>
+		<div class="main">
+			<h1>cPie.js - KineticJS Pie Chart</h1>
+			<p>cPie.js is a Javascript plugin that generates a Pie Chart. It is powered by <a href="http://kineticjs.com/" target="_blank">KineticJS</a> Canvas Framework and is distributed under MIT License.</p>
+			<a id="download" href="#" target="_blank">Download on GitHub</a>
+		</div>
+	</header>
+	
+	<div class="main" id="demo">
+		<div id="container"></div>
+	</div>
+
+	<div class="main" id="howToUse">
+		<h2>How to use</h2>
+
+		<h3>HTML</h3>
+<pre>
+&lt;div id="container"&gt;&lt;/div&gt;
+</pre>		
+
+		<h3>JAVASCRIPT</h3>
+<pre>
+cPie.init({
+	container: document.getElementById('container'),
+	width: 800,
+	height: 600,
+	background: '#ffffff',
+	borderColor: '#cccccc',
+	events: true,
+	title: 'Website visits (2014)',
+	titleColor: '#787878',
+	titleFontFamily: 'Arial',
+	titleFontSize: 14,
+	pie: {
+		radius: 250,
+		offsetX: 40,
+		strokeColor: '#ffffff',
+		strokeWidth: 1,
+		showPercentages: true,
+		percentFontFamily: 'Arial',
+		percentFontSize: 20,
+		percentFontColor: '#ffffff'
+	},
+	descArea: {
+		offsetX: 40,
+		offsetY: 40,
+		itemWidth: 27,
+		itemHeight: 18,
+		strokeColor: '#ffffff',
+		strokeWidth: 1,
+		fontFamily: 'Arial',
+		fontSize: 14,
+		fontColor: '#787878'
+	},
+	data: [
+		{
+			text: 'Organic search',
+			percent: 24.3,
+			color: '#DC3811'
+		},
+		{
+			text: 'Email Marketing',
+			percent: 19,
+			color: '#109617'
+		},
+		{
+			text: 'Social Media',
+			percent: 10.4,
+			color: '#3265CB'
+		},
+		{
+			text: 'Referrals',
+			percent: 20.4,
+			color: '#980098'
+		},
+		{
+			text: 'Advertisements',
+			percent: 13.6,
+			color: '#0098C5'
+		},
+		{
+			text: 'Direct navigation',
+			percent: 12.3,
+			color: '#FF9800'
+		}
+	]
+});	
+</pre>
+	</div>
+
+	<footer>
+		<div class="main">
+			<p>Copyright &copy; George Raptis | <a href="http://www.georap.gr">http://www.georap.gr</a></p>
+		</div>
+	</footer>
 
 	<script src="vendor/kinetic.min.js"></script>
 	<script src="src/cPie.js"></script>
-
+	
 	<script>
+		// Initialize plugin
 		cPie.init({
 			container: document.getElementById('container'),
 			width: 800,
@@ -26,7 +117,7 @@
 			events: true,
 			title: 'Website visits (2014)',
 			titleColor: '#787878',
-			titleFontFamily: 'Calibri',
+			titleFontFamily: 'Arial',
 			titleFontSize: 14,
 			pie: {
 				radius: 250,
@@ -34,7 +125,7 @@
 				strokeColor: '#ffffff',
 				strokeWidth: 1,
 				showPercentages: true,
-				percentFontFamily: 'Calibri',
+				percentFontFamily: 'Arial',
 				percentFontSize: 20,
 				percentFontColor: '#ffffff'
 			},
@@ -45,7 +136,7 @@
 				itemHeight: 18,
 				strokeColor: '#ffffff',
 				strokeWidth: 1,
-				fontFamily: 'Calibri',
+				fontFamily: 'Arial',
 				fontSize: 14,
 				fontColor: '#787878'
 			},

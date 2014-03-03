@@ -1,0 +1,121 @@
+*{ margin:0px; padding:0px; }
+
+body{
+	font-size: 76%; 
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	min-width: 960px;
+}
+a{
+	color: #558CBD;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.main{
+	width: 960px;
+	margin: auto;
+}
+#demo{
+	text-align: center;
+}
+
+header{
+	width: 100%;
+	padding: 2.50em 0;
+}
+header h1{
+	font-size: 2.50em;
+	font-weight: 300;
+	text-align: center;
+	padding: 0 0 15px 0;
+}
+header #download{
+	display: block;
+	margin: 0 auto;
+	font-size: 1.33em;
+	font-weight: 300;
+	width: 215px;
+	padding: 8px 0px;
+	color: #ffffff;
+	text-align: center;
+	background: #558CBD;
+
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+header #download:hover{
+	text-decoration: none;
+	background: #3265CB;
+
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+header p{
+	width: 550px;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+	font-size: 1.33em;
+	font-weight: 300;
+	color: #484848;
+}
+
+footer{
+	padding: 2.50em 0;	
+}
+footer p{
+	font-size: 1.00em;
+	font-weight: 300;
+	color: #484848;
+}
+
+#howToUse{
+	margin-top: 25px;
+}
+#howToUse h2{
+	font-size: 2.00em;
+	font-weight: 300;
+}
+
+/* pre element */
+pre {
+	width: 910px;
+	overflow-x: auto;
+	padding: 20px 25px;
+	margin-bottom: 25px;
+	font-size: 1.17em;
+	color: #454545;
+	background-color: #F5F7F7;
+	background-image: url(images/blueprint-dark.png);
+	background-repeat: repeat;
+	border-left: 5px solid #558CBD;
+}
+pre .line-number {
+	font-size: 0.90em;
+	float: left;
+  	margin: 0 1em 0 -1em;
+  	border-right: 1px solid #ccc;
+  	text-align: right;
+  	color: #708090;
+}
+pre .line-number span {
+  	display: block;
+  	padding: 0 0.5em 0 1em;
+}
+pre .cl {
+  	display: block;
+  	clear: both;
+}
+pre span.comment { color:#708090; }
+pre span.highlight { font-weight:bold; }
+pre span.declare { color:#0095DD; }
+pre span.string { color:#690; }
+pre span.bool { color:#B80000; }
