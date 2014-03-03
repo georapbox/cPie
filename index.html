@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kineticjs Pie Chart</title>
+	<style>
+		*{ margin:0; padding:0; }
+		/* canvas{
+			border: 1px solid #ccc !important;
+		} */
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+
+	<script src="kinetic.min.js"></script>
+	<script src="cPie.js"></script>
+
+	<script>
+		cPie.init({
+			container: document.getElementById('container'),
+			width: 800,
+			height: 600,
+			background: '#ffffff',
+			borderColor: '#cccccc',
+			events: true,
+			title: 'Website visits (2014)',
+			titleColor: '#787878',
+			titleFontFamily: 'Calibri',
+			titleFontSize: 14,
+			pie: {
+				radius: 250,
+				offsetX: 40,
+				strokeColor: '#ffffff',
+				strokeWidth: 1,
+				showPercentages: true,
+				percentFontFamily: 'Calibri',
+				percentFontSize: 20,
+				percentFontColor: '#ffffff'
+			},
+			descArea: {
+				offsetX: 40,
+				offsetY: 40,
+				itemWidth: 27,
+				itemHeight: 18,
+				strokeColor: '#ffffff',
+				strokeWidth: 1,
+				fontFamily: 'Calibri',
+				fontSize: 14,
+				fontColor: '#787878'
+			},
+			data: [
+				{
+					text: 'Organic search',
+					percent: 24.3,
+					color: '#DC3811'
+				},
+				{
+					text: 'Email Marketing',
+					percent: 19,
+					color: '#109617'
+				},
+				{
+					text: 'Social Media',
+					percent: 10.4,
+					color: '#3265CB'
+				},
+				{
+					text: 'Referrals',
+					percent: 20.4,
+					color: '#980098'
+				},
+				{
+					text: 'Advertisements',
+					percent: 13.6,
+					color: '#0098C5'
+				},
+				{
+					text: 'Direct navigation',
+					percent: 12.3,
+					color: '#FF9800'
+				}
+			]
+		});
+	</script>
+</body>
+</html>
