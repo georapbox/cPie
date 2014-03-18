@@ -190,7 +190,6 @@ var cPie = (function (w, d, undef) {
 			      		x: wedge.attrs.x,
 			      		y: wedge.attrs.y,
 			      		align: 'center',
-			      		width: args.pie.radius,
 			      		shadowOffsetX: 1,
 			      		shadowOffsetY: 1,
 			      		shadowBlur: 3,
@@ -199,7 +198,8 @@ var cPie = (function (w, d, undef) {
 				        fontFamily: args.pie.percentFontFamily,
 				        fontSize: args.pie.percentFontSize,
 				        fill: args.pie.percentFontColor,
-				        name: 'text'
+				        name: 'text',
+				        offset: {x:-args.pie.radius / 2, y:0}
 			      	});
 
 					pie.add(percentage);
@@ -252,8 +252,8 @@ var cPie = (function (w, d, undef) {
 		  	layer.add(descArea);						// add descArea to layer
 		  	layer.add(pie);								// add pie to layer
 		  	stage.add(layer);							// add layer to stage
-			
 
+			
 		  	/**
 		  	 * @desc Apply Events on layer shapes if events is set to 'true'
 		  	*/
